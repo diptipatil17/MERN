@@ -40,7 +40,7 @@ function MyProduct() {
 
   const handleDelete = async (productId) => {
     try {
-      await axios.delete("http://localhost:5000/", productId);
+      await axios.delete(`http://localhost:5000/${selectedProductId}`, productId);
       fetchProducts(); // Refresh the product list
     } catch (error) {
       console.error('Error deleting product:', error);
